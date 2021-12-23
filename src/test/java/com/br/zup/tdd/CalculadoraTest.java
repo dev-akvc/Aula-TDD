@@ -53,4 +53,12 @@ public class    CalculadoraTest {
         Assert.assertEquals(10,resultado);
     }
 
+    @Test
+    public void testarDivisaoDoisNumerosPositivos(){
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.dividir(12,3);
+
+        Assert.assertEquals(4,resultado);
+    }
+
 }
