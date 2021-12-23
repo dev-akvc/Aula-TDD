@@ -3,7 +3,7 @@ package com.br.zup.tdd;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class    CalculadoraTest {
+public class CalculadoraTest {
 
     @Test
     public void testarSomaDeDoisNumerosCaminhoPositivo(){
@@ -54,11 +54,35 @@ public class    CalculadoraTest {
     }
 
     @Test
+    public void testarMultiplicacaoDoisNumerosNegativos(){
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.multiplicar(-2,-5);
+
+        Assert.assertEquals(10,resultado);
+    }
+
+    @Test
     public void testarDivisaoDoisNumerosPositivos(){
         Calculadora calculadora = new Calculadora();
         int resultado = calculadora.dividir(12,3);
 
         Assert.assertEquals(4,resultado);
+    }
+
+    @Test
+    public void testarDivisaoDoisNumerosNegativos(){
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.dividir(-12,-3);
+
+        Assert.assertEquals(4,resultado);
+    }
+
+    @Test
+    public void testarDivisaoNumeradorNegativoDenominadorPositivo(){
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.dividir(-12,3);
+
+        Assert.assertEquals(-4,resultado);
     }
 
 }
