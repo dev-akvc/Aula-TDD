@@ -44,4 +44,13 @@ public class    CalculadoraTest {
 
         Assert.assertEquals(-6, resultado);
     }
+
+    @Test
+    public void testarMultiplicacaoDoisNumerosPositivos(){
+        Calculadora calculadora = new Calculadora();
+        int resultado = calculadora.multiplicar(2,5);
+
+        Assert.assertEquals(10,resultado);
+    }
+
 }
