@@ -30,4 +30,9 @@ public class Calculadora {
         return resultado;
     }
 
+    public int dividir(int x, int y){
+        int resultado = x / y;
+        return resultado;
+    }
+
 }
